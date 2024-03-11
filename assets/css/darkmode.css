@@ -1,0 +1,106 @@
+/* Toggle Switch Styles */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    margin-left: 10px;
+  }
+  
+  .toggle-switch-checkbox {
+    display: none;
+  }
+  
+  .toggle-switch-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.4s;
+  }
+  
+  .toggle-switch-checkbox:checked + .toggle-switch-label {
+    background-color: #2196F3;
+  }
+  
+  .toggle-switch-label:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2.5px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.4s;
+  }
+  
+  .toggle-switch-checkbox:checked + .toggle-switch-label:before {
+    transform: translateX(25px) translateY(-50%);
+    content: '';
+  }
+  
+  .toggle-switch-label:after {
+    content: '\f185'; /* Sun icon */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 14px;
+    color: rgb(44, 38, 68);
+    position: absolute;
+    top: 54%;
+    transform: translateY(-50%);
+    left: 5.3px;
+    transition: transform 0.4s;
+  }
+  
+  .toggle-switch-checkbox:checked + .toggle-switch-label:after {
+    content: '\f186'; /* Moon icon */
+    color: #222; /* Dark color for moon icon in dark mode */
+    transform: translateX(25px) translateY(-50%);
+  }
+  
+  /* Dark Mode Styles */
+  .dark-mode {
+    background-color: #222;
+    color: #fff;
+  }
+  
+  .dark-mode .navbar {
+    background-color: #222 !important;
+  }
+  
+  .dark-mode .navbar .nav-link {
+    color: #fff !important;
+  }
+  
+  .dark-mode #regform {
+    background-color: transparent; /* Set the background color to transparent */
+    color: #fff;
+  }
+  
+  /* Light Mode Styles */
+  .light-mode #regform {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .light-mode {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .light-mode .modal-content {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .dark-mode .modal-content {
+    background-color: #222;
+    color: #fff;
+  }
+  
